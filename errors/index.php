@@ -16,6 +16,8 @@ $result = mysql_query($query) or die('Query failed: ' . mysql_error());
 
 // Printing results in HTML
 echo "<table style='border: 1px solid black;'>\n";
+echo "<tr><th>id</th><th>error msg</th><th>url</th><th>line number</th><th>date</th></tr>";
+
 while ($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
     echo "\t<tr>\n";
 
