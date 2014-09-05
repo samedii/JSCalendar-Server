@@ -1,5 +1,6 @@
 <html>
 <head>
+<link rel="StyleSheet" type="text/css" href="/JSCalendar-Server/json2html/style.css" />
 </head>
 <body>
 
@@ -8,17 +9,18 @@
 // Connecting, selecting database
 $link = mysql_connect('localhost', 'direwolf_se', 'gtrbbdET')
     or die('Could not connect: ' . mysql_error());
-echo 'Connected successfully<br/>';
+//echo 'Connected successfully<br/>';
 
 mysql_select_db('direwolf_se') or die('Could not select database<br/>');
-echo "Selected db successfully<br/>";
-
+//echo "Selected db successfully<br/>";
+echo "<br/>";
 // Performing SQL query
 $query = 'SELECT state,id,errorMsg,url,lineNumber,date FROM JSCalendarErrors WHERE id=' . $_GET['id'];
 $result = mysql_query($query) or die('Query failed: ' . mysql_error());
 
+echo "<a href='index.php'>Back</a><hr/>";
 
-echo "<table style='border: 1px solid black;'>\n";
+echo "<table style='border: 1px solid black; background-color: lightblue'>\n";
 
 $state = -1;
 
@@ -48,9 +50,9 @@ mysql_close($link);
 ?>
 
 <form>
-      <div id="inputcontainer"><textarea id="text" rows="12" style="display:none;"><?php echo $state ?></textarea></div>
-      <div id="output" class="output"></div>
-   </form>
+<div id="inputcontainer"><textarea id="text" rows="12" style="display:none;"><?php echo $state ?></textarea></div>
+<div id="output" class="output"></div>
+</form>
 
 
 <script type="text/javascript" src="/JSCalendar-Server/json2html/scripts/json-min.js"></script>
