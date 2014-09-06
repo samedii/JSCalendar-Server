@@ -9,7 +9,7 @@ mysql_select_db('direwolf_se') or die('Could not select database<br/>');
 echo "Selected db successfully<br/>";
 
 // Performing SQL query
-$query = 'SELECT id,errorMsg,url,lineNumber,date FROM JSCalendarErrors';
+$query = 'SELECT id,errorMsg,url,lineNumber,date FROM JSCalendarErrors ORDER BY date DESC';
 $result = mysql_query($query) or die('Query failed: ' . mysql_error());
 
 
