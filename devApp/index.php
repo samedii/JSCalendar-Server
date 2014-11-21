@@ -45,7 +45,7 @@ $bgcolor3c = "#003399";
 $txtcolor1c = "#000000";
 $txtcolor2c = "#003399";
 $filefolder = "./templates/";
-$sitetitle = 'Edit template';
+$sitetitle = 'Edit/create template';
 $user = 'teamwahlin';
 $pass = 'grunka';
 
@@ -134,7 +134,7 @@ function maintop($title,$showtop = true) {
   if ($showtop) {
     echo "<tr><td><font size=\"2\">\n"
         ."<a href=\"".$adminfile."?op=home\" $iftop>Home</a>\n"
-        ."<img src=pixel.gif width=7 height=1><a href=\"".$adminfile."?op=up\" $iftop>Upload</a>\n"
+        //."<img src=pixel.gif width=7 height=1><a href=\"".$adminfile."?op=up\" $iftop>Upload</a>\n"
         ."<img src=pixel.gif width=7 height=1><a href=\"".$adminfile."?op=cr\" $iftop>Create</a>\n"
         ."<img src=pixel.gif width=7 height=1><a href=\"".$adminfile."?op=logout\" $iftop>Logout</a>\n";
 
@@ -273,6 +273,8 @@ function home() {
 /* First step to Upload.                                        */
 /* User enters a file and the submits it to upload()            */
 /****************************************************************/
+
+/*
 function up() {
   global $folder, $content, $filefolder;
   maintop("Upload");
@@ -291,7 +293,7 @@ function up() {
 
   mainbottom();
 }
-
+*/
 
 /****************************************************************/
 /* function upload()                                            */
@@ -300,6 +302,8 @@ function up() {
 /* Saves the file to the disk.                                  */
 /* Recieves $upfile from up() as the uploaded file.             */
 /****************************************************************/
+
+/*
 function upload($upfile, $ndir) {
 
   global $folder;
@@ -317,7 +321,7 @@ function upload($upfile, $ndir) {
     printerror("Please enter a filename.");
   }
 }
-
+*/
 
 /****************************************************************/
 /* function del()                                               */
