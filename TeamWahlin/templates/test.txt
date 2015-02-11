@@ -1,1 +1,25 @@
-test: test
+Internt.uppdrag:	 
+Uppsk.tid<n>:	 
+Objektsnr<n>:	 
+Kund:	 
+Adress:	 
+Postadress<n>:	 
+Telefon<n>:	 
+Mail:	 
+Arbetare:	 
+Arbetsbesk:	 
+Datum:	 
+Arb.tid<n>:	 
+Börjat.p.p<t>:  
+Slutat.p.p<t>:  
+Odeb.tid<n>:	 
+Odeb.tid.beskrivning:	 
+Km<n>:	 
+Km.inst<n>:	 
+Material:	 
+Hämt.material<s>:  
+Egenkontroll<s>:
+
+
+
+

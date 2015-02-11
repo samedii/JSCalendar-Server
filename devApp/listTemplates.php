@@ -14,26 +14,14 @@ if ($handle = opendir("./templates")) {
 		if ($entry != "." && $entry != "..") {
 
 			$filename = "./templates/$entry";
-			$fhandle = fopen ($filename, "r");
 
-			$contents = "";
+      			$contents = file_get_contents($filename);
 
-    			while ($x<1) {
-      				$data = @fread ($fhandle, filesize ($filename));
-      				if (strlen($data) == 0) {
-       				break;
-      				}
-      				$contents .= $data;
-    			}
-    			fclose ($fhandle);
-
-			$explode = explode(".", $entry);
-			$name = $explode[0];
-
-			array_push($templates,array(
-    				"name" => $name,
-    				"template" => $contents,
+			array_push($templates, array(
+    				"name" => $entry,
+    				"template" => utf8_encode($contents),
 			));
+
 		}
 	}
 
