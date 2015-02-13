@@ -20,10 +20,10 @@ $query = "INSERT INTO
 		`JSCalendarErrors`
 			(`state`, `errorMsg`, `url`, `lineNumber`) 
 			VALUES ('" . 
-				$_GET['state'] . "','" .
-				$_GET['errorMsg'] . "','" .
-				$_GET['url'] . "','" .
-				$_GET['lineNumber'] . "'
+				$_POST['state'] . "','" .
+				$_POST['errorMsg'] . "','" .
+				$_POST['url'] . "','" .
+				$_POST['lineNumber'] . "'
 			)";
 
 echo $query . '<br/>';

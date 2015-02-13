@@ -19,7 +19,3 @@ Km.inst<n>:
 Material:	 
 Hämt.material<s>:  
 Egenkontroll<s>:
-
-
-
-
